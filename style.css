@@ -195,13 +195,13 @@ button,
   font-weight: 800;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 4px 4px 0 var(--black);
+  box-shadow: none;
 }
 
 button:hover,
 .button-link:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 3px 3px 0 var(--black);
+  background: var(--magenta);
+  color: var(--white);
 }
 
 button:disabled {
@@ -233,13 +233,13 @@ button:disabled {
   margin-top: 20px;
 }
 
-.offer-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  object-position: center;
-  background: #ffffff;
-  border: 1px solid var(--line);
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 2px solid var(--black);
+  background: var(--white);
 }
 
 .offer-card:nth-child(1) {
@@ -256,9 +256,10 @@ button:disabled {
 
 .offer-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 300px;
   object-fit: contain;
-  background: #f2f2f2;
+  object-position: center;
+  background: #ffffff;
   border: 1px solid var(--line);
 }
 
@@ -299,5 +300,10 @@ button:disabled {
 
   .hero {
     grid-template-columns: 1fr;
+  }
+
+  .offer-card img {
+    height: auto;
+    max-height: 420px;
   }
 }
