@@ -1,5 +1,4 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbzftyTcWVrRTetm2Oo3lweuMFQn94ApuX9HkvCspzgE7f7lK6rtuslT4BNPFncJQ8oE/exec";
-
 const form = document.getElementById("studentForm");
 const messageBox = document.getElementById("message");
 const offersSection = document.getElementById("offers");
