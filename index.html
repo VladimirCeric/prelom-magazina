@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rekonstrukcija magazinskog preloma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <img src="assets/logo_dzs.jpg" alt="Dizajn štampe" class="logo" />
+      <div>
+        <p class="kicker">Dizajn štampe</p>
+        <h1>Rekonstrukcija magazinskog preloma</h1>
+        <p class="intro">
+          Biće vam prikazana tri ponuđena seta. Svaki set ima thumbnail i link ka PDF-u sa četiri strane.
+          Pre izbora otvorite PDF svakog seta, pogledajte sve četiri strane i procenite šta će biti potrebno rekonstruisati.
+        </p>
+      </div>
+    </header>
+
+    <section class="notice cmyk-bar">
+      <p>
+        Zadatak nije redizajn, već izrada što vernije kopije postojećeg preloma.
+        Izaberite set prema tipu magazinskog preloma koji vam najviše odgovara, ali obratite pažnju na format,
+        margine, tipografiju, slike, boje, grafičke elemente i odnose između elemenata.
+      </p>
+      <p><strong>Nakon izbora, set nije moguće promeniti.</strong></p>
+    </section>
+
+    <section class="instruction-image">
+      <h2>Na šta treba obratiti pažnju</h2>
+      <p>
+        Ilustracija prikazuje tipične elemente koje treba analizirati. Neće se svi elementi pojaviti u svakom setu,
+        ali svaki set treba posmatrati kroz format, tipografiju, slike, grafičke elemente i odnose među njima.
+      </p>
+      <a href="assets/upustvo.svg" target="_blank" rel="noopener" class="svg-link">
+        <img src="assets/upustvo.svg" alt="Objašnjenje elemenata magazinskog preloma" />
+      </a>
+      <p class="small-note">Kliknite na ilustraciju da je otvorite u većem prikazu.</p>
+    </section>
+
+    <section class="guidelines">
+      <div class="guide-card cyan">
+        <h3>Opšte</h3>
+        <ol>
+          <li>Izmeriti format originalne strane po širini i visini.</li>
+          <li>Postaviti dokument u istom formatu.</li>
+          <li>Dodati 3 mm bleed na spoljnim ivicama strana.</li>
+          <li>Odrediti margine: gornju, donju, unutrašnju i spoljašnju.</li>
+          <li>Postaviti pomoćne linije prema originalu.</li>
+          <li>Obratiti pažnju na poravnanja, razmake i odnos elemenata kroz sve četiri strane.</li>
+        </ol>
+      </div>
+
+      <div class="guide-card magenta">
+        <h3>Tipografija</h3>
+        <p>Potrebno je pronaći pisma koja su po karakteru slična onima u originalu.</p>
+        <ol>
+          <li>Broj različitih pisama.</li>
+          <li>Vrste pisama i njihovi rezovi.</li>
+          <li>Veličine pisma za naslov, podnaslov, međunaslov, osnovni tekst, citat, potpis slike i paginaciju.</li>
+          <li>Boja pisma.</li>
+          <li>Prored / leading.</li>
+          <li>Razmak između slova / tracking i po potrebi kerning.</li>
+          <li>Poravnanje teksta.</li>
+          <li>Uvlake i razmak između pasusa.</li>
+          <li>Broj kolona.</li>
+          <li>Međukolonski razmak.</li>
+          <li>Veličina i položaj tekstualnih okvira.</li>
+          <li>Posebni elementi: inicijal, citat, rotirani tekst, tekst preko slike, potpis slike, header/footer i paginacija.</li>
+        </ol>
+      </div>
+
+      <div class="guide-card yellow">
+        <h3>Slike i vizuelni elementi</h3>
+        <p>Sve slike moraju biti zamenjene novim slikama odgovarajuće funkcije.</p>
+        <ol>
+          <li>Slika treba da odgovara originalu po sadržaju, orijentaciji, proporciji i kadru.</li>
+          <li>Obratiti pažnju na krop, dominantni motiv, svetlo/tamno, kontrast i dominantne boje.</li>
+          <li>Slike moraju biti dovoljne rezolucije za štampu.</li>
+          <li>Ako original koristi screenshot, ilustraciju, proizvod ili portret, zamena treba da ima istu funkciju.</li>
+          <li>Po potrebi ukloniti pozadinu ili napraviti masku.</li>
+          <li>Ako vizuelni element dodiruje ivicu strane, mora se produžiti do bleed linije.</li>
+          <li>Ako se oko elementa tekst obmotava, podesiti text wrap i razmak od teksta.</li>
+        </ol>
+      </div>
+
+      <div class="guide-card black">
+        <h3>Grafički elementi</h3>
+        <ol>
+          <li>Rekonstruisati linije, okvire, trake, boksove i separatore.</li>
+          <li>Obratiti pažnju na boje, debljinu linija i položaj grafičkih elemenata.</li>
+          <li>Rekonstruisati paginaciju, oznake rubrike, potpise fotografija i autorske kredite.</li>
+          <li>Ne izostavljati sitne elemente jer oni često nose identitet strane.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Preuzimanje zadatka</h2>
+      <p>
+        Unesite podatke i kliknite na dugme za prikaz ponuđenih setova.
+        Za prijavu koristite isključivo imejl adresu koja se završava sa <strong>@gs.viser.edu.rs</strong>.
+      </p>
+
+      <form id="studentForm" class="student-form">
+        <label>
+          Ime i prezime
+          <input type="text" id="ime" required />
+        </label>
+
+        <label>
+          Broj indeksa
+          <input type="text" id="indeks" required />
+        </label>
+
+        <label>
+          Studentski imejl
+          <input type="email" id="email" required placeholder="ime.prezime@gs.viser.edu.rs" />
+        </label>
+
+        <button type="submit" id="offerBtn">Prikaži ponuđene setove</button>
+      </form>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+
+    <section id="offers" class="offers hidden">
+      <h2>Ponuđeni setovi</h2>
+      <p>Otvorite PDF svakog seta, pogledajte sve četiri strane i zatim izaberite jedan set.</p>
+      <div id="offerCards" class="offer-grid"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
